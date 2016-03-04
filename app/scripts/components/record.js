@@ -1,5 +1,5 @@
 import React from 'react';
-import money from './../util/moneyFormat.js';
+import {getDollars, getCents} from './../util/moneyFormat.js';
 
 export default React.createClass({
   getInitialState() {
@@ -11,11 +11,6 @@ export default React.createClass({
     this.setState({
       amt: this.state.amt.substr(0, this.state.amt.length-1)
     });
-  },
-  handleAllClear(e) {
-    this.setState({
-      amt: '0'
-    })
   },
   handleNumberClick(e) {
     this.setState({
@@ -34,13 +29,13 @@ export default React.createClass({
   },
   render() {
     return (
-      <main>
-        <h2>${money(this.state.amt)}</h2>
+      <main className="record">
+        <h2>
+          <span className="sign">$</span>
+          <span className="d">{getDollars(this.state.amt)}</span>
+          <span className="c">{getCents(this.state.amt)}</span>
+        </h2>
         <div className="calculator">
-          <div className="calc-row">
-            <input type="button" onClick={this.handleClear} value="C"/>
-            <input type="button" onClick={this.handleAllClear} value="AC"/>
-          </div>
           <div className="calc-row">
             <input type="button" onClick={this.handleNumberClick} value="7"/>
             <input type="button" onClick={this.handleNumberClick} value="8"/>
@@ -57,15 +52,14 @@ export default React.createClass({
             <input type="button" onClick={this.handleNumberClick} value="3"/>
           </div>
           <div className="calc-row">
-
             <input type="button" onClick={this.handleNumberClick} value="0"/>
-            <input type="button" onClick={this.handleNumberClick} value="00"/>
+            <input type="button" onClick={this.handleClear} value="C"/>
           </div>
         </div>
-        <div className="record-btns">
+        <footer className="record-btns">
           <input type="button" onClick={this.handleAdd} value="+"/>
           <input type="button" onClick={this.handleSubtract} value="-"/>
-        </div>
+        </footer>
       </main>
     )
   }

@@ -20,3 +20,15 @@ $color-secondary: #d2e0df;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
 }
+
+// =============================================================================
+//                                  mixins
+// =============================================================================
+
+@mixin cf {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}

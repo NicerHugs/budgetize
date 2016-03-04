@@ -1,0 +1,60 @@
+main.record {
+  h2 {
+    color: $color-primary;
+    text-align: center;
+    @include font-primary;
+    font-size: 7rem;
+    margin: 6rem 0 3rem;
+    line-height: .5;
+
+    .sign {
+      vertical-align: top;
+      font-size: 3rem;
+    }
+
+    .c {
+      font-size: 3rem;
+      @include font-light;
+      vertical-align: top;
+    }
+  }
+
+  .calculator {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .calc-row {
+    @include cf;
+
+    input[type="button"] {
+      color: $color-primary-dark;
+      @include font-light;
+      display: block;
+      float: left;
+      border: none;
+      border-bottom: 1px solid $color-secondary;
+      background: $color-main;
+      padding: 1rem .75rem 1.5rem;
+      margin: 1rem 1.25rem 0;
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      width: calc(33.33% - 2.5rem);
+    }
+  }
+
+  .record-btns input {
+    background: $color-primary;
+    width: 50%;
+    border: 0;
+    color: $color-main;
+    height: 4rem;
+    @include font-primary;
+    font-size: 3rem;
+
+    &:first-of-type {
+      border-right: solid 1px $color-main;
+    }
+
+  }
+}
