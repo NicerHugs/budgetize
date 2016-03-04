@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,100,100italic);
 @import 'variables';
+@import 'header';
+@import 'nav';
 
-body {
-  background: $light-grey;
+html {
+  font-size: 12px;
 }

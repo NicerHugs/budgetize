@@ -1,0 +1,11 @@
+.app-header {
+  background: $color-primary;
+  @include font-primary;
+  color: $color-main;
+}
+
+.app-header-title {
+  margin: 0;
+  padding: .5rem;
+  font-size: 2rem;
+}

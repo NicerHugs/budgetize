@@ -1,3 +1,22 @@
-$light-grey: #efefef;
+// =============================================================================
+//                                 Colors
+// =============================================================================
 
-$body-bg: $light-grey;
+$color-primary: #01CCA9;
+$color-main: #fff;
+$color-primary-dark: darken($color-primary, 10%);
+$color-secondary: #d2e0df;
+
+// =============================================================================
+//                                  Fonts
+// =============================================================================
+
+@mixin font-primary {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+@mixin font-light {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}

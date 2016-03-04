@@ -1,0 +1,28 @@
+.primary-nav {
+  padding: .5rem 0 0;
+  a {
+    color: $color-primary-dark;
+    display: block;
+    width: 33.33%;
+    @include font-light;
+    float: left;
+    text-align: center;
+    border-bottom: 1px solid $color-primary;
+    padding-bottom: .5rem;
+    position: relative;
+
+    &:last-of-type::after{
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1rem;
+      border-right: 1px solid $color-secondary;
+      position: absolute;
+      right: 0;
+      top: .2rem;
+    }
+  }
+}
